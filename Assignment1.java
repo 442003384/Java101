@@ -22,6 +22,7 @@ class Main {
     System.out.println(number1 < number2);
     System.out.println(number1 <= number2);
     System.out.println(number1 != number2);
+    //تأكد من السطر ٢٦ بحيث تكون عملية مساواة وليست إسناد
     System.out.println(number1 = number2);
   }
 }
