@@ -1,0 +1,53 @@
+import java.util.Locale;
+import java.util.Random;
+import java.util.Scanner;
+
+public class RockPaperSejava {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        //this is a random letter
+        String computerPlays = "rps";
+        Random rnd = new Random();
+        do{
+            System.out.println("If you want to play enter:\n(r or R) for rock,\n(p or P) for paper,\n(s or S) for scissors\nor Enter any key to exit");
+            String PlayerMove;
+            PlayerMove = scan.nextLine();
+            PlayerMove .toLowerCase(Locale.ROOT);
+            char XXX = PlayerMove.charAt(0);
+            if (XXX != 'r' && XXX != 'p' && XXX !='s') {
+                System.out.println("Error restarting again\n");
+                break;
+            }
+
+
+            char computerChoice = computerPlays.charAt(rnd.nextInt(computerPlays.length()));
+            System.out.println("PlayerMove: "  +XXX+  "    VS  computerPlays: "  +computerChoice);
+            if (XXX == computerChoice){
+                System.out.println("the game was a tie");
+            }
+            else if (XXX == 'r'){
+                if (computerChoice == 'p'){
+                    System.out.println("You win");
+                }else if (computerChoice == 's'){
+                    System.out.println("Pc win");
+                }
+            }
+            else if (XXX == 'p'){
+                if (computerChoice == 'r'){
+                    System.out.println("PC win");
+                }else if (computerChoice == 's'){
+                    System.out.println("You win");
+                }
+            }
+            else if (XXX == 's'){
+                if (computerChoice == 'p'){
+                    System.out.println("Pc win");
+                }else if (computerChoice == 'r'){
+                    System.out.println("You win");
+                }
+            }
+
+            System.out.println("\n\n");
+        }while(true);
+    }
+}
