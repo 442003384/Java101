@@ -3,10 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 //your grade is 4/5
 
-//fix file name to be RockPaperSe.java
-
-//fix class name to be RockPaperSe
-public class Ex {
+public class  RockPaperSe {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         //this is a random letter
