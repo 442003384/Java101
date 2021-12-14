@@ -50,19 +50,20 @@ static void courseByName(String course, int[] ids, String[] studentsName, String
         }
         }
         }
-    static void max(String course, int[] ids, String[] studentsName, String[] courses, int[] grades) {
+static void max(String course, int[] ids, String[] studentsName, String[] courses, int[] grades) {
         //start the loop from 0 to ids length
-        int max=5;
+        int max=0;
         int ind=0;
         for (int index = 0; index < ids.length; ++index) {
-            //if the courses at index equals to the course then print his course and grade
-            if (courses[index].equals(course) & max<grades[index]) {
-                max=grades[index];
-                ind=index;
-                System.out.format("[%d]:%s has the highest %d  grade in %s\n", ids[ind], studentsName[ind], grades[ind], course);
-            }
+        //if the courses at index equals to the course then print his course and grade
+        if (courses[index].equals(course) & max<grades[index]) {
+        max=grades[index];
+        ind=index;
         }
-    }
+        }
+        System.out.format("[%d]:%s has the highest %d  grade in %s\n", ids[ind], studentsName[ind], grades[ind], course);
+
+}
 
 
 
